@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img {
+				width: 400px;
+				height: 250px;
+			}
+		</style>
+	</head>
+	<body> 
+		<input type="button" value="点我"/><br />
+		<img src="第一题images/a.jpg"/>
+		<script>
+			var inputNode = document.getElementsByTagName("input")[0];
+			var imgNode = document.getElementsByTagName("img")[0];
+//			var flag = false;
+//			inputNode.onclick = function(){
+////			console.info(imgNode.src)
+//					if(flag == true){
+//						imgNode.src = "第一题images/b.jpg";
+//						flag = false;
+//					}else{
+//						imgNode.src = "第一题images/a.jpg";
+//						flag = true;
+//					}
+//			}
+//			
+			inputNode.onclick = function (){
+				var flag = this.flag;
+				if(!Boolean(flag)){
+					imgNode.src = "第一题images/b.jpg";
+					this.flag = true;
+				}else{
+					imgNode.src = "第一题images/a.jpg";
+					this.flag = false;
+				}
+			}
+		</script>
+	</body>
+</html>

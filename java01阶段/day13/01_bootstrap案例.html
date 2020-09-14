@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			#header {
+				border-bottom: 1px solid lightgrey;
+			}
+			
+			.box {
+				height: 50px;
+				border-right: 1px solid lightgrey;
+				text-align: center;
+				line-height: 50px;
+			}
+			
+			.box:last-child {
+				border-right: none;
+			}
+			/*.box:nth-child(2n) {
+				background-color: #2AABD2;
+			}
+			.box:nth-child(2n+1) {
+				background-color: #6ABB78;
+			}*/
+			/*div {
+				background-color: #000000;
+				height: 100px;
+			}*/
+			img {
+				width: 150px;
+				height: 49px;
+			}
+			
+			#mynav .navbar-brand {
+				padding: 0;
+				height: 50px;
+				display: block;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="row">
+				<div class="container-fluid hidden-xs hidden-sm">
+					<div class="box col-md-2 col-md-"><span class="glyphicon glyphicon-phone"></span>关注公众号<span class="glyphicon glyphicon-triangle-bottom"></span></div>
+					<div class="box col-md-6"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>888-555-6666(服务时间：9:00-21:00)</div>
+					<div class="box col-md-1">校企合作&nbsp;培训师</div>
+					<div class="box col-md-3"><button class="btn btn-info btn-xs">免费注册</button>立即登录</div>
+				</div>
+			</div>
+		</div>
+		<div id="mynav">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+							<a class="navbar-brand" href="#"><img src="img/logo.jpg"/></a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li class="active">
+									<a href="#">关于我们 <span class="sr-only">(current)</span></a>
+								</li>
+								<li>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程介绍<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Web前端</a>
+										</li>
+										<li>
+											<a href="#">Java</a>
+										</li>
+										<li>
+											<a href="#">Something else here</a>
+										</li>
+										<li role="separator" class="divider"></li>
+										<li>
+											<a href="#">Separated link</a>
+										</li>
+										<li role="separator" class="divider"></li>
+										<li>
+											<a href="#">One more separated link</a>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">热门课程<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Action</a>
+										</li>
+										<li>
+											<a href="#">Another action</a>
+										</li>
+										<li>
+											<a href="#">Something else here</a>
+										</li>
+										<li role="separator" class="divider"></li>
+										<li>
+											<a href="#">Separated link</a>
+										</li>
+										<li role="separator" class="divider"></li>
+										<li>
+											<a href="#">One more separated link</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<form class="navbar-form navbar-left hidden-xs hidden-sm">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Web 前端">
+								</div>
+								<button type="submit" class="btn btn-default">搜索</button>
+							</form>
+							<ul class="nav navbar-nav navbar-right">
+								<!--<li>
+								<a href="#">Link</a>
+							</li>-->
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Action</a>
+										</li>
+										<li>
+											<a href="#">Another action</a>
+										</li>
+										<li>
+											<a href="#">Something else here</a>
+										</li>
+										<li role="separator" class="divider"></li>
+										<li>
+											<a href="#">Separated link</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- /.navbar-collapse -->
+					</div>
+					<!-- /.container-fluid -->
+				</nav>
+			</div>
+		</div>
+		<!--<h1>你好，世界！</h1>
+		<button class="btn btn-info">按钮</button>-->
+		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+		<script src="js/jquery-1.12.2.js"></script>
+		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+		<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

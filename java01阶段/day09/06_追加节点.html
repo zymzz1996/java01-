@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="提前元素" id="btn"/>
+		<div>
+			<ul>
+				<li>上元it01</li>
+				<li>上元it03</li>
+				<li>上元it04</li>
+			</ul>
+		</div>
+		<div>上元it02</div>
+	</body>
+	<script>
+		var btnNode = document.getElementById("btn");
+		var divNode = document.getElementsByTagName('div');
+		var liNode = document.getElementsByTagName('li');
+		var ulNode = document.getElementsByTagName('ul')[0];
+		btnNode.onclick = function(){
+			ulNode.insertBefore(divNode[1],liNode[1]);
+		}
+	</script>
+</html>

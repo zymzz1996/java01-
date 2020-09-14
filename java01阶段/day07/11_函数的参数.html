@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun1(n,m){
+				var sum=0;
+				for(var i = n;i<=m;i++){
+					if(n>m){
+						var temp=n;
+						n=m;
+						m=temp;
+					}
+					sum += i;
+				}
+				console.info(sum)
+			}
+			fun1(1,3);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

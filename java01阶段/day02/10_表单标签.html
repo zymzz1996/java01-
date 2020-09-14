@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="https://www.baidu.com/?tn=88093251_56_hao_pg" method="get" target="_blank">
+			用户名：<input type="text" name="user" placeholder="请输入用户名" autofocus autocomplete="on"/><br />
+			密&nbsp;码：<input type="password" name="password" /><br />
+			数&nbsp;字：<input type="number" name="num" min="0" max="10"/><br />
+			隐藏域：<input type="hidden" name="id" value="123456"/><br />
+			性别：<label>男<input type="radio" name="gender" value="male" checked/></label>
+				<label for="123">女</label><input id="123" type="radio" name="gender" value="female" /><br />
+			爱好：篮球<input type="checkbox" name="hobbit" value="basketball" checked/>
+				足球<input type="checkbox" name="hobbit" value="football" checked/>
+				羽毛球<input type="checkbox" name="hobbit" value="yumaoqiu"/>
+				乒乓球<input type="checkbox" name="hobbit" value="pingpangqiu"/><br />
+			所在城市：<select name="city">
+						<option>...所在城市...</option>
+						<option selected="">苏州</option>
+						<option>南京</option>
+						<option>上海</option>
+					</select><br />
+			个人介绍：<textarea name="jieshao" cols="30" rows="10" readonly>123</textarea><br />
+			照片：<input name="photo" type="file"/><br />
+			<input type="submit"/><input type="reset"/><br />
+			<input type="button" value="普通" disabled="disabled"/>
+		</form>
+	</body>
+</html>

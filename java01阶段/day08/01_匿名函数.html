@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//无参数无返回值
+			(function(){
+				console.info("我是第一个匿名函数");
+			})();
+			//有参数无返回值
+			var funName=function(a,b){
+				console.info(a+b);
+			}
+			funName(1,2);
+			//有参数有返回值
+			var result=(function(a,b){
+				return a+b;
+			})(3,4)
+			console.info(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

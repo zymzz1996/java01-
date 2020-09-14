@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>小明</li>
+			<li>小强</li>
+			<li>寒梅</li>
+			<li>吉姆</li>
+		</ul>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script>
+			var $liNodes = $('li');
+			$liNodes.each(function(index,node){
+				console.info(node.innerHTML);
+			})
+			$.each($liNodes, function(index,node) {
+				console.info(node.innerText);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.a {
+				width: 300px;
+				height: 200px;
+				background-color: #00FF00;
+				text-align: center;
+				line-height: 200px;
+			}
+			.b {
+				width: 300px;
+				height: 200px;
+				background-color: #800080;
+				text-align: center;
+				line-height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="btn" value="添加元素"/>
+		<div id="div" class="a">
+			上元教育
+		</div>
+		<script>
+			var divNode = document.getElementById("div");
+			var btnNode = document.getElementById("btn");
+			var bodyNode = document.body;
+			btnNode.onclick = function(){
+				var newNode = document.createElement("div");
+				newNode.innerText = '上元it'
+				newNode.className = 'b';
+				bodyNode.appendChild(newNode);
+			}
+		</script>
+	</body>
+</html>

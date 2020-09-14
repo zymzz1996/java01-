@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    
+</head>
+<body>
+<div style="margin-left: 500px; margin-top: 20px; background-color: #999999">
+    <select multiple="multiple" style="float: left; width: 160px; height: 200px;" id="se1">
+        <option>北京</option>
+        <option>上海</option>
+        <option>广州</option>
+        <option>深圳</option>
+        <option>南京</option>
+    </select>
+    <div style="width: 100px; float: left;text-align: center;height: 200px;line-height: 50px;">
+        <input type="button" name="name" value=">" style="width: 50px; height: 20px;" id="toRight" />
+        <input type="button" name="name" value="<" style="width: 50px; height: 20px;" id="toLeft" />
+        <input type="button" name="name" value=">>" style="width: 50px; height: 20px;" id="toAllRight" />
+        <input type="button" name="name" value="<<" style="width: 50px; height: 20px;" id="toAllLeft" />
+    </div>
+    <select multiple="multiple" style="float: left; width: 160px; height: 200px;" id="se2">
+    </select>
+</div>
+	<script type="text/javascript" src="../../js/jquery-1.8.3.min.js" ></script>
+	<script>
+		var $toAllRight = $('#toAllRight');
+		$toAllRight.click(function(){
+			var $opNodes = $('#se1>option');
+			var $seNodes = $('#se2');
+			moveAll($opNodes,$seNodes);
+		})
+		var $toAllLeft = $('#toAllLeft');
+		$toAllLeft.click(function(){
+			var $opNodes = $('#se2>option');
+			var $seNodes = $('#se1');
+			$seNodes.append($opNodes);
+		})
+		
+		var $toRight = $('#toRight');
+		$toRight.click(function(){
+			var $opNodes = $('#se1>option:selected');
+			var $seNodes = $('#se2');
+			move($opNodes,$seNodes);
+		})
+		var $toLeft = $('#toLeft');
+		$toLeft.click(function(){
+			var $opNodes = $('#se2>option:selected');
+			var $seNodes = $('#se1');
+			move($opNodes,$seNodes);
+		})
+		function move($opNodes,$seNodes){
+			$seNodes.append($opNodes);
+		}
+		function moveAll($opNodes,$seNodes){
+			$seNodes.append($opNodes);
+		}
+		
+		var $se1Node = $('#se1');
+		var $se2Node = $('#se2');
+		$se1Node.on('dblclick','option',function(){
+			$se2Node.append($(this));
+		})
+		$se2Node.on('dblclick','option',function(){
+			$(this).appendTo($se1Node);
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var input1 = prompt("请输入第一个数：");
+			var n1 = Number(input1);
+			var input2 = prompt("请输入第二个数：");
+			var n2 = Number(input2);
+			var fuhao = prompt("请输入运算符号：");
+			switch (fuhao) {
+				case '*':
+				alert("两数运算结果为："+n1*n2);
+				break;
+				case '/':
+				alert("两数运算结果为："+n1/n2);
+				break;
+				case '+':
+				alert("两数运算结果为："+(n1+n2));
+				break;
+				case '-':
+				alert("两数运算结果为："+(n1-n2));
+				break;
+				case '%':
+				alert("两数运算结果为："+(n1%n2));
+				break;
+				default:
+				alert("输入有误！");
+				break;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

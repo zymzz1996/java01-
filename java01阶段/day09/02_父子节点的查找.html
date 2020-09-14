@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<ul id="ul">
+				<li>上元会计</li>
+				<li>上元学历</li>
+				<li>上元设计</li>
+				<li>上元it</li>
+			</ul>
+		</div>
+		<script>
+			var ulNode = document.getElementById("ul");
+			var liNode1 = document.getElementsByTagName("li")[0];
+			var firstNode = ulNode.firstElementChild;
+//			console.info(firstNode);
+			firstNode.style.color ='red';
+			var lastNode = ulNode.lastElementChild;
+			lastNode.style.color = "blue";
+			var childNode = ulNode.children;
+//			console.dir(childNode);
+			for(var i=0;i<childNode.length;i++){
+				childNode[i].onclick = function(){
+					alert(this.innerText);
+				}
+			}
+			var divNode = liNode1.parentElement.parentElement;
+			divNode.style.border = "1px solid red";
+		</script>
+	</body>
+</html>

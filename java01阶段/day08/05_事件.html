@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 500px;
+				height: 500px;
+				background-color: #DC143C;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="点我改变div" onclick="change()"/>
+		<input type="button" value="点我改变div2"/>
+		<div></div>
+		<script>
+			function change(){
+				var divNode = document.getElementsByTagName("div")[0];
+				divNode.style.borderRadius = 250+'px';
+				divNode.style.backgroundColor = "#ADD8E6";
+			}
+			var inputNode = document.getElementsByTagName("input")[1];
+			inputNode.onclick = function(){
+				var divNode = document.getElementsByTagName("div")[0];
+				divNode.style.borderRadius = 250+'px';
+				divNode.style.backgroundColor = "#ADD8E6";
+			}
+		</script>
+	</body>
+</html>

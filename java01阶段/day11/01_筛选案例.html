@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../day10/js/jquery-1.8.3.min.js"></script>
+		<style>
+			div {
+				width: 100px;
+				text-align: center;
+				
+			}
+			li {
+				list-style-type: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="" >
+			<ul>
+				<li>数据</li>
+				<li>数据</li>
+				<li>数据</li>
+				<li>数据</li>
+				<li>数据</li>
+				<li>数据</li>
+				<li>数据</li>
+				<li>数据</li>
+				<li>数据</li>
+				<li>数据</li>
+			</ul>
+		</div>
+		<script>
+			var $liNodes = $('li');
+			$liNodes.mouseover(function(){
+				$(this).css('background-color','red')
+			}).click(function(){
+				$(this).nextAll().css('background-color','green').end().prevAll().css('background-color','blue');
+			}).mouseout(function(){
+				$(this).css('background-color','white').siblings().css('background-color','white');
+			})
+		</script>
+	</body>
+</html>

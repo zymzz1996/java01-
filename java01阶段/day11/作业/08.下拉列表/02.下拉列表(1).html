@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            width: 330px;
+            height: 30px;
+            margin: 100px auto 0;
+            padding-left: 10px;
+            background-color: pink;
+        }
+
+        .wrap li{
+            background-color: pink;;
+        }
+
+        .wrap > ul > li {
+            float: left;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        .wrap a {
+            display: block;
+            height: 30px;
+            width: 100px;
+            text-decoration: none;
+            color: #Fff;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .wrap li ul {
+            position: absolute;
+            top: 30px;
+            display: none;
+        }
+
+    </style>
+   
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li>
+            <a href="javascript:void(0);" class="province">江苏</a>
+            <ul id="js">
+                <li><a href="javascript:void(0);">南京</a></li>
+                <li><a href="javascript:void(0);">无锡</a></li>
+                <li><a href="javascript:void(0);">苏州</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="province">广东</a>
+            <ul id="gd">
+                <li><a href="javascript:void(0);">广州</a></li>
+                <li><a href="javascript:void(0);">深圳</a></li>
+                <li><a href="javascript:void(0);">中山</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="province">云南</a>
+            <ul id="yn">
+                <li><a href="javascript:void(0);">大理</a></li>
+                <li><a href="javascript:void(0);">香格里拉</a></li>
+                <li><a href="javascript:void(0);">昆明</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js" ></script>
+	<script>
+		var $pvNodes = $('.province');
+		var $jsNodes = $('#js');
+		var $gdNodes = $('#gd');
+		var $ynNodes = $('#yn');
+		$pvNodes.hover(
+			function(){
+				var content = $(this).text();
+				if(content == '江苏'){
+					$jsNodes.show();
+				}else if(content == '广东'){
+					$gdNodes.show();
+				}else{
+					$ynNodes.show();
+				}
+			},
+			function(){
+				$ynNodes.hide();
+				$gdNodes.hide();
+				$jsNodes.hide();
+			}
+		)
+	</script>
+</body>
+</html>

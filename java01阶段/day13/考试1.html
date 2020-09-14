@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str = prompt('请输入四位整数');
+			var result = '';
+			for (var i = 0;i < str.length;i++){
+				var c = str[i];
+				var num = Number(c);
+				num += 5;
+				num %= 10;
+				result = num + result;
+			}
+			console.info(result);
+//			alert(result);
+		</script>
+	</body>
+</html>

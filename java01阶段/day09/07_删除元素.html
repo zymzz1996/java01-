@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="删除元素" id="btn"/>
+		<ul>
+			<li>上元01</li>
+			<li>上元02</li>
+			<li>上元03</li>
+			<li>上元04</li>
+		</ul>
+	</body>
+	<script>
+		var liNodes = document.getElementsByTagName('li');
+		var btnNode = document.getElementById('btn');
+		btnNode.onclick = function(){
+//			liNodes[1].remove();
+			liNodes[1].parentNode.removeChild(liNodes[1]);
+		}
+		
+	</script>
+</html>

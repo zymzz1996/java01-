@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div.box {
+				position: fixed;
+			}
+			div.main {
+				width: 85px;
+				height: 90px;
+				border: 1px solid lightgray;
+				border-bottom: none;
+				text-align: center;
+				padding-bottom: 8px;
+				background-repeat: no-repeat;
+				background-position: center 10px; 
+			}
+			div.main1 {
+				background-image: url(https://i8.mifile.cn/b2c-mimall-media/98a23aae70f25798192693f21c4d4039.png);
+			}
+			
+			div.main2 {
+				background-image: url(https://i8.mifile.cn/b2c-mimall-media/55cad219421bee03a801775e7309b920.png);
+			}
+			
+			div.main3 {
+				background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/12eb0965ab33dc8e05870911b90f3f13.png);
+			}
+			
+			div.main4 {
+				background-image: url(https://i8.mifile.cn/b2c-mimall-media/4f036ae4d45002b2a6fb6756cedebf02.png);
+			}
+			
+			div.main5 {
+				background-image: url(https://i8.mifile.cn/b2c-mimall-media/d7db56d1d850113f016c95e289e36efa.png);
+			}
+			
+			div.last {
+				border-bottom: 1px solid lightgray;
+			}
+			
+			span {
+				display: inline-block;
+				padding-top: 75px;
+			}
+			a {
+				text-decoration: none;
+				color: gray;
+			}
+			a:hover {
+				color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<a href="#"><div class="main1 main"><span>手机APP</span></div></a>
+			<a href="#"><div class="main2 main"><span>个人中心</span></div></a>
+			<a href="#"><div class="main3 main"><span>售后服务</span></div></a>
+			<a href="#"><div class="main4 main"><span>人工客服</span></div></a>
+			<a href="#"><div class="main5 main last"><span>购物车</span></div></a>
+		</div>
+		<script>
+			var Node1= document.getElementsByClassName("main1")[0];
+			Node1.onmouseover = function(){
+				Node1.style.backgroundImage = 'url(https://i8.mifile.cn/b2c-mimall-media/74c4fcb4475af8308e9a670db9c01fdf.png)';
+			}
+			Node1.onmouseout = function(){
+				Node1.style.backgroundImage = 'url(https://i8.mifile.cn/b2c-mimall-media/98a23aae70f25798192693f21c4d4039.png)';
+			}
+			var Node2= document.getElementsByClassName("main2")[0];
+			Node2.onmouseover = function(){
+				Node2.style.backgroundImage = 'url(https://i8.mifile.cn/b2c-mimall-media/41f858550f42eb1770b97faf219ae215.png)';
+			}
+			Node2.onmouseout = function(){
+				Node2.style.backgroundImage = 'url(https://i8.mifile.cn/b2c-mimall-media/55cad219421bee03a801775e7309b920.png)';
+			}
+			
+			var Node3= document.getElementsByClassName("main3")[0];
+			Node3.onmouseover = function(){
+				Node3.style.backgroundImage = 'url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/95fbf0081a06eec7be4d35e277faeca0.png)';
+			}
+			Node3.onmouseout = function(){
+				Node3.style.backgroundImage = 'url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/12eb0965ab33dc8e05870911b90f3f13.png)';
+			}
+			
+			var Node4= document.getElementsByClassName("main4")[0];
+			Node4.onmouseover = function(){
+				Node4.style.backgroundImage = 'url(https://i8.mifile.cn/b2c-mimall-media/5e9f2b1b0da09ac3b3961378284ef2d4.png)';
+			}
+			Node4.onmouseout = function(){
+				Node4.style.backgroundImage = 'url(https://i8.mifile.cn/b2c-mimall-media/4f036ae4d45002b2a6fb6756cedebf02.png)';
+			}
+			
+			var Node5= document.getElementsByClassName("main5")[0];
+			Node5.onmouseover = function(){
+				Node5.style.backgroundImage = 'url(https://i8.mifile.cn/b2c-mimall-media/692a6c3b0a93a24f74a29c0f9d68ec71.png)';
+			}
+			Node5.onmouseout = function(){
+				Node5.style.backgroundImage = 'url(https://i8.mifile.cn/b2c-mimall-media/d7db56d1d850113f016c95e289e36efa.png)';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		省份<select id="province" onchange="showCity()">
+		    	<option>省份</option>
+		    	<option>河南</option>
+		        <option>山东</option>
+		        <option>广东</option>
+		    	</select>
+		城市<select id="city">
+				<option>城市</option>
+			</select>
+	</body>
+	<script>
+		function showCity (){
+			
+            /*
+            	定义二维数组，存放城市
+            */
+			//城市数组要与option标签中的省份相对应，因为第一个选项就是“省份”描述，所以第一个数组用空数组即可
+			var citys = [[],["郑州","南阳","安阳"],["蓝翔","青岛","崂山"],["深圳","广州","中山"]];
+			
+            
+            /*
+            	根据选择的省份，得到这个省份中的城市数组
+            */
+			//获取用户选择的省份
+			var provinceNode = document.getElementById("province");
+			//获取选择的省份的索引
+			var index = provinceNode.selectedIndex;
+			//根据省份的索引从二维数组中获取到显示的城市数据，showCity是一个一维数组
+			var showCity = citys[index];
+			
+			
+            /*
+            	将城市下拉菜单中的所有标签删除
+            */
+			//我们需要把显示的数据显示到城市这个下拉菜单中，首先需要获取到城市下拉菜单的节点，再获取到它的子节点，也就是具体的城市，将他们删除后，再将获取到的信息显示在城市下拉菜单中
+			//获取到城市下拉菜单的节点
+			var cityNode = document.getElementById("city");
+			//获取到城市下拉菜单的子节点，也就是具体的城市选项，得到的是一个子节点数组
+			var cityChildNodes = cityNode.childNodes;
+			//将所有的cityChilds删除，也就是城市下拉菜单中的所有元素。
+            //for循环这里没有变量自增，是因为每当删除一个城市后，下一个城市就自动向前，所以只用一直删除第一个城市即可。
+			for(var i = 0; i < cityChildNodes.length; ){
+				cityNode.removeChild(cityChildNodes[i]);
+			}
+			
+			
+            /*
+            	将得到的城市数组显示在城市的下拉列表中
+            */
+			//将获取的城市显示到城市下拉菜单的option标签中
+			for(var i = 0; i < showCity.length; i++){
+				//创建一个option标签用于存放具体的城市
+				var optionCityNode = document.createElement("option");
+				//将查询到的城市添加到option标签中
+				optionCityNode.innerHTML = showCity[i];
+				//将optionCityNode标签添加到城市下拉菜单中
+				cityNode.appendChild(optionCityNode);
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.a {
+				display: none;
+			}
+			.b {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<select id="province" onchange="showCity()">
+			<option>省份</option>
+			<option>江苏</option>
+			<option>浙江</option>
+			<option>安徽</option>
+		</select>
+		<select id="city">
+			<option>城市</option>
+		</select>
+		<script>
+			var citys = [[],['南京','苏州','无锡','常州'],['杭州','绍兴','宁波','温州'],['合肥','安庆','阜阳','蚌埠']]
+			function showCity(){
+				var pvNode =document.getElementById("province");
+				var ctNode = document.getElementById('city');
+				var index = pvNode.selectedIndex;
+				var city = citys[index];
+//				alert(index);
+				ctNode.options.length = 1;
+				for(var i in city){
+					var optionNode = document.createElement('option');
+					optionNode.innerText = city[i];
+					ctNode.appendChild(optionNode);
+				}
+			}
+		</script>
+	</body>
+</html>

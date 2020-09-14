@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="刷新" id="btn1"/>
+		<input type="button" value="获取当前地址" id="btn2"/>
+		<input type="button" value="跳转" id="btn3"/>
+		<script>
+			var btnNode1 = document.getElementById('btn1')
+			btnNode1.onclick = function(){
+				location.reload();
+			}
+			var btnNode2 = document.getElementById('btn2')
+			btnNode2.onclick = function(){
+//				alert(location.href);
+				alert(decodeURI(location.href));
+			}
+			var btnNode3 = document.getElementById('btn3')
+			btnNode3.onclick = function(){
+				location.href = "http://www.baidu.com";
+			}
+		</script>
+	</body>
+</html>

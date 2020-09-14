@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.a {
+				width: 300px;
+				height: 200px;
+				background-color: #00FF00;
+				text-align: center;
+				line-height: 200px;
+			}
+			.b {
+				width: 300px;
+				height: 200px;
+				background-color: #800080;
+				text-align: center;
+				line-height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="btn" value="替换元素"/>
+		<input type="button" id="btn2" value="克隆元素"/>
+		<div id="div" class="a">
+			上元教育
+		</div>
+		<script>
+			var oldNode = document.getElementById("div");
+			var btnNode = document.getElementById("btn");
+			var btnNode2 = document.getElementById("btn2");
+			var bodyNode = document.body;
+			btnNode.onclick = function(){
+				var newNode = document.createElement("div");
+				newNode.innerText = '上元it'
+				newNode.className = 'b';
+				bodyNode.replaceChild(newNode,oldNode);
+			}
+			btnNode2.onclick = function(){
+				var newNode = oldNode.cloneNode(true);
+				bodyNode.appendChild(newNode);
+			}
+		</script>
+	</body>
+</html>

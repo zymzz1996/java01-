@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img {
+				width: 400px;
+				height: 250px;
+			}
+		</style>
+	</head>
+	<body> 
+		<input type="button" value="点我"/><br />
+		<img src="第一题images/a.jpg"/>
+		<script>
+			var inputNode = document.getElementsByTagName("input")[0];
+			var imgNode = document.getElementsByTagName("img")[0];
+			var i = 0;
+			inputNode.onclick = function(){
+//			console.info(imgNode.src)
+					if(i % 2 ==0){
+						imgNode.src = "第一题images/b.jpg";
+					}else{
+						imgNode.src = "第一题images/a.jpg";
+					}
+					i++;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="我是一个按钮" onclick="change(this)"/>
+		<input type="button" value="我是一个按钮" id="btn"/>
+		<script>
+			function change(obj){
+				obj.value = "我改变了自己";
+			}
+			document.getElementById("btn").onclick = function(){
+				this.value = "我改变了自己";
+			}
+			
+		</script>
+	</body>
+</html>

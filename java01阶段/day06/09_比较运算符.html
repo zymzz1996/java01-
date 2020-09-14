@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+//			比较运算符：> < >= <= != == ===
+			console.info(undefined==null);//==只判断数据是否相等，不判断数据类型是否相同
+			console.info(undefined===null);//===还要判断数据类型
+			//字符串的比较
+			console.info("123">"20"); //比较第一位
+			console.info("123">"1230");//第一位相同则比较长度
+			console.info("123"==123);//字符串和数字比较，先将字符串转为数字，再比较
+			//undefine和null的运算
+			console.info(null+1);
+			console.info(undefined+1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

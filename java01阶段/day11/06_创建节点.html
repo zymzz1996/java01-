@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<div id="box"></div>
+		<input type="button" value="点击"/>
+		<script>
+//			var $divNode = $('<div>');
+			var $divNode = $('<div><h1>上元教育</h1></div>');
+			var $boxNode = $('#box');
+			var $btnNode = $('input');
+			$btnNode.click(function(){
+				$boxNode.height('200px').width('200px');
+				$boxNode.append($divNode);
+			})
+		</script>
+	</body>
+</html>

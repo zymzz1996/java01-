@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="变换内容"/>
+		<div id="">
+			<span>上元教育</span>
+		</div>
+		<script>
+			var btnNode = document.getElementsByTagName("input")[0];
+			var divNode = document.getElementsByTagName("div")[0];
+			btnNode.onclick = function(){
+//				divNode.innerText = '上元教育';
+//				divNode.innerHTML = '<h1>上元教育</h1>'
+//				var content = divNode.innerText;
+				var content = divNode.innerHTML;
+				console.info(content);
+			}
+			
+		</script>
+	</body>
+</html>

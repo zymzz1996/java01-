@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="开始" id="btn1"/>
+		<input type="button" value="结束" id="btn2"/>
+		<div id="div"></div>
+		<script>
+			var divNode = document.getElementById('div');
+			var btnNode1 = document.getElementById('btn1');
+			var btnNode2 = document.getElementById('btn2');
+			var arr = ['red','blue','orange'];
+			var index = 0;
+			btnNode1.onclick = function(){
+//				setTimeout(function(){
+//				divNode.style.backgroundColor = '#7FFFD4'
+//				},2000)
+				time = setInterval(changeColor,500)
+				
+			}
+			function changeColor() {
+			    if(index === 3) {
+				 	index =0;
+				}
+				divNode.style.backgroundColor = arr[index];
+				index++;
+			}
+			btnNode2.onclick = function(){
+				if(time){
+					clearInterval(time);
+				}
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table {
+				border: 1px solid gray;
+				margin-top: 50px;
+				margin-left: auto;
+				margin-right: auto;
+				/*border-collapse: collapse;*/
+				width: 500px;
+				height: 200px;
+			}
+			
+			.tr1 {
+				background-color: darkgray;
+			}
+			
+			.tr2 {
+				background-color: lightgray;
+			}
+			
+			#btn{
+				text-align: center;
+				margin-left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<td width="100" align="center"><input type="checkbox" id="topbtn"/></td>
+					<td>商品</td>
+					<td>7000</td>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+				<tr>
+					<td><input type="checkbox"/></td>
+					<td>苹果手机</td>
+					<td>6000</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"/></td>
+					<td>小米手机</td>
+					<td>5000</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"/></td>
+					<td>vivo手机</td>
+					<td>4000</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox"/></td>
+					<td>oppo手机</td>
+					<td>4000</td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="button" value="反选" id="reversebtn"/>
+		<script>
+			//制作样式
+			var tNode = document.getElementsByTagName("tr");
+			tNode[0].className = "tr1"
+			for(i=1;i<tNode.length;i++){
+				tNode[i].className = "tr2"
+			}
+			
+			var topBtnNode = document.getElementById("topbtn");
+			var singleBtnNodes = document.getElementById("tbody").getElementsByTagName("input");
+			var reverseBtnNode = document.getElementById("reversebtn");
+			//全选
+			topBtnNode.onclick = function(){
+				for(i = 0;i < singleBtnNodes.length;i++){
+					singleBtnNodes[i].checked = this.checked;
+				}
+			}
+			//反选
+			reverseBtnNode.onclick = function(){
+				for(i = 0;i < singleBtnNodes.length;i++){
+					if(singleBtnNodes[i].checked){
+						singleBtnNodes[i].checked = false;
+					}else{
+						singleBtnNodes[i].checked = true;
+					}
+				}
+				ischeckAll();
+			}
+			//单选复选控制
+			for(i = 0;i < singleBtnNodes.length;i++){
+				singleBtnNodes[i].onclick = function(){
+				ischeckAll();
+				}
+			}
+			function ischeckAll(){
+				var flag = true;
+					for(i = 0;i < singleBtnNodes.length;i++){
+//						var flag = true;
+						if(!singleBtnNodes[i].checked){
+							topBtnNode.checked = singleBtnNodes[i].checked;
+//							flag = false;
+							break;
+						}
+						topBtnNode.checked = flag;
+					}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.a{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				background-color: lightpink;
+			}
+			.b {
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				background-color: lightcoral;
+			}
+		</style>
+		<script src="js/jquery-1.8.3.min.js"></script>
+	</head>
+	<body>
+		<div id="">
+			
+		</div>
+		<div></div>
+		<div></div>
+		<input type="button" value="变色"/>
+		<script>
+			 var $divNode = $('div');
+			 $divNode.addClass('a').addClass('b');
+			 $divNode.removeClass('b');
+//			 alert($divNode.hasClass('a'));
+//			 console.info($divNode.hasClass('b'));
+			 $btnNode = $('input');
+			 $btnNode[0].onclick = function(){
+			 	if($divNode.hasClass('a')){
+			 	 	$divNode.addClass('b');
+				 	$divNode.removeClass('a');
+			 	}else{
+			 		$divNode.addClass('a');
+					$divNode.removeClass('b');
+			 	}
+			 }
+		</script>
+	</body>
+</html>

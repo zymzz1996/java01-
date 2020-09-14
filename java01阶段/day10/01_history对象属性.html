@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="前进" id="forward"/>
+		<input type="button" value="后退" id="back"/>
+		<input type="button" value="刷新" id="reflash"/>
+		<a href="http://www.baidu.com">百度</a>
+		<script>
+			var fwNode = document.getElementById('forward');
+			var bcNode = document.getElementById('back');
+			var flNode = document.getElementById('reflash')
+			fwNode.onclick = function(){
+//				history.forward();
+				history.go(1);
+			}
+			bcNode.onclick = function(){
+//				history.back();
+				history.go(-1);
+			}
+			flNode.onclick = function(){
+				location.reload();
+//				history.go(0);
+			}
+		</script>
+	</body>
+</html>

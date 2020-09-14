@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div.pbox {
+				border: 5px solid black;
+				width: 600px;
+			}
+			div.sbox1 {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				float: left;
+			}
+			div.sbox2 {
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				float: left;
+			}
+			div.sbox3 {
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				float: left;
+			}
+			div.sbox4 {
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				float: left;
+			}
+			div.pbox2 {
+				width: 200px;
+				height: 400px;
+				background-color: pink;
+			}
+			.clearbox::after {
+				content: '这是一个伪元素';
+				clear: both;
+				display: block;
+				width: 0px;
+				height: 0px;
+				overflow: hidden;
+			}
+			/*div.clearbox {
+				clear: both;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="pbox clearbox">
+				<div class="sbox1"></div>
+				<div class="sbox2"></div>
+				<div class="sbox3"></div>
+				<div class="sbox4"></div>
+				<!--<div class="clearbox"></div>-->
+			</div>
+		<div class="pbox2"></div>
+	</body>
+</html>

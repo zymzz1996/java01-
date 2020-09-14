@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			div.box {
+				height: 150px;
+				display: flex;
+				background-color: rgba(255,255,255,.3);
+				justify-content: center;
+				align-items: center;
+			}
+			div.img {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+			body {
+				background-image: url(images-换肤/3.jpg);
+				background-size: cover;
+			}
+			img {
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="img"><img src="images-换肤/1.jpg" width="150"/></div>
+			<div class="img"><img src="images-换肤/2.jpg" width="150"/></div>
+			<div class="img"><img src="images-换肤/3.jpg" width="150"/></div>
+			<div class="img"><img src="images-换肤/4.jpg" width="150"/></div>
+			<div class="img"><img src="images-换肤/5.jpg" width="150"/></div>
+		</div>
+		<script type="text/javascript">
+			var imgNode = document.getElementsByClassName("img");
+			var bodyNode = document.getElementsByTagName("body")[0];
+			imgNode[0].onclick = function(){
+				bodyNode.style.backgroundImage = 'url(images-换肤/1.jpg)';
+			}
+			imgNode[1].onclick = function(){
+				bodyNode.style.backgroundImage = 'url(images-换肤/2.jpg)';
+			}
+			imgNode[2].onclick = function(){
+				bodyNode.style.backgroundImage = 'url(images-换肤/3.jpg)';
+			}
+			imgNode[3].onclick = function(){
+				bodyNode.style.backgroundImage = 'url(images-换肤/4.jpg)';
+			}
+			imgNode[4].onclick = function(){
+				bodyNode.style.backgroundImage = 'url(images-换肤/5.jpg)';
+			}
+		</script>
+	</body>
+</html>

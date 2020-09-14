@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>数据</li>
+			<li>数据</li>
+			<li>数据</li>
+			<li>数据</li>
+			<li>数据</li>
+			<li>数据</li>
+		</ul>
+		<hr color="#000000"/>
+		<div id="div">上元教育</div>
+		<input type="button" value="点击"/>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	<script>
+		var $btnNode = $('input');
+		var $divNode = $('#div');
+		var $ulNode = $('ul');
+		$btnNode.click(function(){
+//			$ulNode.append($divNode);
+//			$divNode.appendTo($ulNode);
+
+//			$ulNode.prepend($divNode);
+//			$divNode.prependTo($ulNode);	
+			
+//			$ulNode.after($divNode);
+//			$divNode.insertAfter($ulNode);
+			
+//			$ulNode.before($divNode);
+			$divNode.insertBefore($ulNode);
+		})
+	</script>
+</html>

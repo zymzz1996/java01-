@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table {
+				border: 1px solid gray;
+				margin-top: 50px;
+				margin-left: auto;
+				margin-right: auto;
+				/*border-collapse: collapse;*/
+				width: 500px;
+				height: 200px;
+			}
+			
+			.tr1 {
+				background-color: darkgray;
+			}
+			
+			.tr2 {
+				background-color: lightgray;
+			}
+			
+			#btn{
+				text-align: center;
+				margin-left: 700px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td width="100" align="center"><input type="checkbox" class="box"/></td>
+				<td>商品</td>
+				<td>7000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="box"/></td>
+				<td>苹果手机</td>
+				<td>6000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="box"/></td>
+				<td>小米手机</td>
+				<td>5000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="box"/></td>
+				<td>vivo手机</td>
+				<td>4000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="box"/></td>
+				<td>oppo手机</td>
+				<td>4000</td>
+			</tr>
+		</table>
+		<input type="button" value="反选" id="btn"/>
+		<script>
+			var tNode = document.getElementsByTagName("tr");
+			tNode[0].className = "tr1"
+			for(i=1;i<tNode.length;i++){
+				tNode[i].className = "tr2"
+			}
+			
+			var boxNode = document.getElementsByClassName("box");
+//			console.info(boxNode[0].checked)
+			boxNode[0].onclick = function(){
+				if(boxNode[0].checked == true) {
+					for(i=1;i<boxNode.length;i++){
+						boxNode[i].checked = true;
+					}
+				}else{
+					for(i=1;i<boxNode.length;i++){
+						boxNode[i].checked = false;
+					}
+				}
+			}
+			
+			boxNode[1].onclick = function(){
+				if(boxNode[2].checked == true && boxNode[3].checked == true && boxNode[4].checked == true){
+					if(boxNode[1].checked == false){
+						boxNode[0].checked = false;
+					}else{
+						boxNode[0].checked = true;
+					}
+				}
+			}
+		
+			boxNode[2].onclick = function(){
+				if(boxNode[1].checked == true && boxNode[3].checked == true && boxNode[4].checked == true){
+					if(boxNode[2].checked == false){
+						boxNode[0].checked = false;
+					}else{
+						boxNode[0].checked = true;
+					}
+				}
+			}
+			
+			boxNode[3].onclick = function(){
+				if(boxNode[1].checked == true && boxNode[2].checked == true && boxNode[4].checked == true){
+					if(boxNode[3].checked == false){
+						boxNode[0].checked = false;
+					}else{
+						boxNode[0].checked = true;
+					}
+				}
+			}
+			
+			boxNode[4].onclick = function(){
+				if(boxNode[1].checked == true && boxNode[2].checked == true && boxNode[3].checked == true){
+					if(boxNode[4].checked == false){
+						boxNode[0].checked = false;
+					}else{
+						boxNode[0].checked = true;
+					}
+				}
+			}
+			
+			var btnNode = document.getElementById("btn");
+			btnNode.onclick = function(){
+				//1真
+				if(boxNode[1].checked == true){
+					if(boxNode[2].checked == true && boxNode[3].checked == true && boxNode[4].checked == true){
+						alert("错误！");
+					}else if(boxNode[2].checked == false && boxNode[3].checked == false && boxNode[4].checked == false){
+						//1真 234假
+						boxNode[1].checked = false;
+						boxNode[2].checked = true;
+						boxNode[3].checked = true;
+						boxNode[4].checked = true;
+					}else if(boxNode[2].checked == true && boxNode[3].checked == true && boxNode[4].checked == true){
+						//234真 1假
+						boxNode[4].checked = false;
+						boxNode[2].checked = false;
+						boxNode[3].checked = false;
+						boxNode[1].checked = true;
+					}else if(boxNode[2].checked == true && boxNode[3].checked == true && boxNode[4].checked == false){
+						//123真 4假
+						boxNode[1].checked = false;
+						boxNode[2].checked = false;
+						boxNode[3].checked = false;
+						boxNode[4].checked = true;
+					}else if(boxNode[2].checked == true && boxNode[4].checked == true && boxNode[3].checked == false){
+						//124真 3假
+						boxNode[1].checked = false;
+						boxNode[2].checked = false;
+						boxNode[4].checked = false;
+						boxNode[3].checked = true;
+					}else if(boxNode[3].checked == true && boxNode[4].checked == true && boxNode[2].checked == false){
+						//134真 2假
+						boxNode[1].checked = false;
+						boxNode[3].checked = false;
+						boxNode[4].checked = false;
+						boxNode[2].checked = true;
+					}else if(boxNode[2].checked == true && boxNode[3].checked == false && boxNode[4].checked == false){
+						//12真 34假
+						boxNode[1].checked = false;
+						boxNode[2].checked = false;
+						boxNode[3].checked = true;
+						boxNode[4].checked = true;
+					}else if(boxNode[3].checked == true && boxNode[2].checked == false && boxNode[4].checked == false){
+						//13真 24假
+						boxNode[1].checked = false;
+						boxNode[3].checked = false;
+						boxNode[2].checked = true;
+						boxNode[4].checked = true;
+					}else{
+						//14真 23假
+						boxNode[1].checked = false;
+						boxNode[4].checked = false;
+						boxNode[2].checked = true;
+						boxNode[3].checked = true;
+					}
+					//1假
+				}else{
+					if(boxNode[2].checked == false && boxNode[3].checked == false && boxNode[4].checked == false){
+						alert("错误！");
+					}else if(boxNode[2].checked == true && boxNode[3].checked == true && boxNode[4].checked == true){
+						//234真 1假
+						boxNode[4].checked = false;
+						boxNode[2].checked = false;
+						boxNode[3].checked = false;
+						boxNode[1].checked = true;
+					}else if(boxNode[2].checked == false && boxNode[3].checked == true && boxNode[4].checked == true){
+						//34真 12假
+						boxNode[3].checked = false;
+						boxNode[4].checked = false;
+						boxNode[1].checked = true;
+						boxNode[2].checked = true;
+					}else if(boxNode[3].checked == false && boxNode[2].checked == true && boxNode[4].checked == true){
+						//24真 13假
+						boxNode[2].checked = false;
+						boxNode[4].checked = false;
+						boxNode[1].checked = true;
+						boxNode[3].checked = true;
+					}else if(boxNode[4].checked == false && boxNode[2].checked == true && boxNode[3].checked == true){
+						//23真 14假
+						boxNode[2].checked = false;
+						boxNode[3].checked = false;
+						boxNode[1].checked = true;
+						boxNode[4].checked = true;
+					}else if(boxNode[2].checked == false && boxNode[3].checked == false && boxNode[4].checked == true){
+						//4真 123假
+						boxNode[4].checked = false;
+						boxNode[1].checked = true;
+						boxNode[2].checked = true;
+						boxNode[3].checked = true;
+					}else if(boxNode[2].checked == false && boxNode[4].checked == false && boxNode[3].checked == true){
+						//3真 124假
+						boxNode[3].checked = false;
+						boxNode[1].checked = true;
+						boxNode[2].checked = true;
+						boxNode[4].checked = true;
+					}else{
+						//2真 134假
+						boxNode[2].checked = false;
+						boxNode[1].checked = true;
+						boxNode[3].checked = true;
+						boxNode[4].checked = true;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

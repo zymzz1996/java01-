@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<style type="text/css">
+			.a {
+				width: 1000px;
+				height: 200px;
+				border: 1px solid salmon;
+				position: relative;
+			}
+			.b {
+				width: 200px;
+				height: 200px;
+				background-color: #8A2BE2;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			<div class="b"></div>
+		</div>
+		<input type="button" value="动画"/>
+		<script>
+			var $btnNode = $('input');
+			var $divNode = $('.b')
+			$btnNode.click(function(){
+				$divNode.animate({
+					left:"800px",
+					borderRadius:"100px"
+				},2000,function(){
+					alert('我动了')
+				})
+			})
+		</script>
+	</body>
+</html>

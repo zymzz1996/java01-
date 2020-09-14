@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				border: solid ;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<script>
+			$divNodes = $('div');
+			$divNodes.mouseover(function(){
+				$(this).css('background-color','lightblue');
+			}).mouseout(function(){
+				$(this).css('background-color','lawngreen')
+			}).mouseup(function(){
+				$(this).css('background-color','mediumslateblue')
+			})
+		</script>
+	</body>
+</html>

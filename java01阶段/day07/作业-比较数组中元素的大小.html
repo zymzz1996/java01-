@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var arr = [4,6,3,2,8];
+			min();
+			max();
+			function min() {
+				var arr1 = arr[0] <= arr[1]?arr[0]:arr[1];
+				var arr2 = arr1 <= arr[2]?arr1:arr[2];
+				var arr3 = arr2 <= arr[3]?arr2:arr[3];
+				var arr4 = arr3 <= arr[4]?arr3:arr[4];
+				console.info(arr4);
+				switch (arr4) {
+					case arr[0]:
+					console.info(0);
+					break;
+					case arr[1]:
+					console.info(1);
+					break;
+					case arr[2]:
+					console.info(2);
+					break;
+					case arr[3]:
+					console.info(3);
+					break;
+					case arr[4]:
+					console.info(4);
+					break;
+				}
+			}
+			function max() {
+				var arr1 = arr[0] >= arr[1]?arr[0]:arr[1];
+				var arr2 = arr1 >= arr[2]?arr1:arr[2];
+				var arr3 = arr2 >= arr[3]?arr2:arr[3];
+				var arr4 = arr3 >= arr[4]?arr3:arr[4];
+				console.info(arr4);
+				switch (arr4) {
+					case arr[0]:
+					console.info(0);
+					break;
+					case arr[1]:
+					console.info(1);
+					break;
+					case arr[2]:
+					console.info(2);
+					break;
+					case arr[3]:
+					console.info(3);
+					break;
+					case arr[4]:
+					console.info(4);
+					break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.a {
+				width: 200px;
+				height: 200px;
+				background-color: #7FFFD4;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="点击" id="btn1"/>
+		<input type="button" value="点击" id="btn2"/>
+		<script>
+			var btnNode1 = document.getElementById('btn1');
+			var btnNode2 = document.getElementById('btn2');
+			btnNode1.onclick = function(){
+				var divNode = document.createElement('div');
+				divNode.className = 'a';
+				var bodyNode = document.body;
+				bodyNode.appendChild(divNode);
+			}
+			btnNode2.onclick = function(){
+				btnNode1.click();
+			}
+		</script>
+	</body>
+</html>

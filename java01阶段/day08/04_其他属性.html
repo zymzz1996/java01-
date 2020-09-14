@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" name="play" value="zuqiu"/>足球
+		<input type="checkbox" name="play" value="lanqiu"/>篮球
+		<input type="checkbox" name="play" value="paiqiu"/>排球
+		<input type="checkbox" name="play" value="yumaoqiu"/>羽毛球
+		<hr />
+		<div class="div"></div>
+		<div>我不想被选中</div>
+		<div class="div"></div>
+		<div>我不想被选中</div>
+		<div class="div"></div>
+		<script>
+			var nameNode = document.getElementsByName("play");
+			for(i=0;i<nameNode.length;i++){
+				if(i%2==0){
+					nameNode[i].checked=true;
+				}
+			}
+			var classNode = document.getElementsByClassName("div");
+			for(i=0;i<classNode.length;i++){
+					classNode[i].style.width = 200+'px';
+					classNode[i].style.height = 200+'px';
+					classNode[i].style.backgroundColor = "blue";
+			}
+		</script>
+	</body>
+</html>

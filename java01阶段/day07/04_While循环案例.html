@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>求婚!</title>
+		<script>
+			var input = prompt("你可以嫁给我吗？")
+			while (true) {
+				if (input == "yes") {
+					break;
+				} else {
+					input = prompt("我可以做饭");
+					if (input == "yes") {
+						break;
+					} else {
+						input = prompt("我可以洗衣");
+						if (input == "yes") {
+							break;
+						} else {
+							input = prompt("我可以做任何事情");
+						}
+					}
+				} 	
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//逻辑运算符：&&与    ||或    ！非
+			var b=1;
+			var a=10 > 5 || b++ > 0;
+			console.info(a);
+			console.info(b);
+			//隐式转换
+			var c="0" || undefined;//非空字符串为真，则输出0
+			console.info(c);
+			var d=null && "0";//null为假，则输出null
+			console.info(d);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

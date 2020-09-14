@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			ul#main {
+				list-style: none;
+				height: 470px;
+				left: 0px;
+				position: absolute;
+				display: flex;
+				/*overflow: hidden;*/
+			}
+			
+			
+			div#box {
+				display:flex;
+				width: 590px;
+				height: 470px;
+				position: relative;
+				margin: 100px auto;
+				border: 1px solid darkcyan;
+			}
+			
+			div#box .circle {
+				width: 10px;
+				height: 10px;
+				z-index: 9999;
+				border-radius: 5px;
+				background-color: rgba(255,255,255,0.5)
+			}
+			
+			div#box .circle:hover {
+				background-color: rgba(255,255,255,1)
+			}
+			
+			div#box #spot {
+				width: 45px;
+				display: flex;
+				justify-content: space-between;
+				position: absolute;
+				top: 445px;
+				left: 30px;
+			}
+			
+			span.left,span.right{
+				position: absolute;
+				color: rgba(255,255,255,0.8);
+				background-color: rgba(0,0,0,0.2);
+				border-radius: 12.5px;
+				display: block;
+				width: 25px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+				cursor: pointer;
+				z-index: 9999;
+			}
+			span.left {
+				left: 8px;
+				top: 225px;
+			}
+			
+			span.right {
+				left: 560px;
+				top: 225px;
+			}
+			
+			span.left:hover {
+				background-color: rgba(0,0,0,0.45)
+			}
+			
+			span.right:hover {
+				background-color: rgba(0,0,0,0.45)
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "box">
+			<div id="spot">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</div>
+			
+			<span class="glyphicon glyphicon-chevron-left left" aria-hidden="true"></span>
+			<span class="glyphicon glyphicon-chevron-right right" aria-hidden="true"></span>
+			<ul id= 'main'>
+				<li><img src="//imgcps.jd.com/ling4/2922989/5Lqs5Lic6LaF5biC/54m55oOg5oqi6LSt/p-5bd81f3682acdd181dfeb407/1efc3e77/cr/s/q.jpg" /></li>
+				<li><img src="//img14.360buyimg.com/pop/s590x470_jfs/t1/146890/26/6662/101072/5f44c861E7ef17e03/63724ae4198d96cc.jpg.webp"/></li>
+				<li><img src="//img30.360buyimg.com/babel/s590x470_jfs/t1/132094/20/9419/73086/5f58365dEc1923a4e/2c20477012c98689.jpg.webp"/></li>
+			</ul>
+		</div>
+			
+		<script>
+			var leftNode = document.getElementsByClassName('left')[0];
+			var rightNode = document.getElementsByClassName('right')[0];
+			var liNodes = document.getElementsByTagName('li');
+			var circleNodes = document.getElementsByClassName('circle');
+			var a = 0;
+			for(var i = 0;i < circleNodes.length;i++){
+				var circleNode = circleNodes[i];
+//				console.info(circleNode);
+				(function(index){
+					circleNode.onclick = function(){
+						var liNode = liNode[index];
+						var length = 
+						liNode.style.left =  
+					}
+				})(i);
+			}
+			
+			
+			leftNode.onclick = function(){
+//				circleNodes[index].style.backgroundColor = 'rgba(255,255,255,1)';
+				clear();
+				var imgNode = imgNodes[index];
+				imgNode.style.display = 'block';
+				index++;
+				if(index === 3){
+					index=0;
+				}
+			}
+			
+			rightNode.onclick = function(){
+				clear();
+				var imgNode = imgNodes[index];
+				imgNode.style.display = 'block';
+				index++;
+				if(index === 3){
+					index=0;
+				}
+			}
+			
+			
+			
+			function clear(){
+				for(var i=0;i<imgNodes.length;i++){
+					var imgNode = imgNodes[i];
+					imgNode.style.display = 'none';
+				}
+			}
+		</script>
+		
+	</body>
+</html>

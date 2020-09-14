@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    
+</head>
+<body>
+<div style="margin-left: 500px; margin-top: 20px; background-color: #999999">
+    <select multiple="multiple" style="float: left; width: 160px; height: 200px;" id="se1">
+        <option>北京</option>
+        <option>上海</option>
+        <option>广州</option>
+        <option>深圳</option>
+        <option>南京</option>
+    </select>
+    <div style="width: 100px; float: left;text-align: center;height: 200px;line-height: 50px;">
+        <input type="button" name="name" value=">" style="width: 50px; height: 20px;" id="toRight" />
+        <input type="button" name="name" value="<" style="width: 50px; height: 20px;" id="toLeft" />
+        <input type="button" name="name" value=">>" style="width: 50px; height: 20px;" id="toAllRight" />
+        <input type="button" name="name" value="<<" style="width: 50px; height: 20px;" id="toAllLeft" />
+    </div>
+    <select multiple="multiple" style="float: left; width: 160px; height: 200px;" id="se2">
+    </select>
+</div>
+	<script type="text/javascript" src="../../js/jquery-1.8.3.min.js" ></script>
+	<script>
+		var $se1Node = $('#se1');
+		var $se2Node = $('#se2');
+		var $toAllRight = $('#toAllRight');
+		$toAllRight.click(function(){
+			var $opNodes = $('#se1>option');
+			$se2Node.append($opNodes);
+		})
+		var $toAllLeft = $('#toAllLeft');
+		$toAllLeft.click(function(){
+			var $opNodes2 = $('#se2>option');
+			$se1Node.append($opNodes2);
+		})
+		
+		var $toRight = $('#toRight');
+		$toRight.click(function(){
+			var $checkedNodes = $('#se1>option:selected');
+			$se2Node.append($checkedNodes);
+		})
+		var $toLeft = $('#toLeft');
+		$toLeft.click(function(){
+			var $checkedNodes = $('#se2>option:selected');
+			$se1Node.append($checkedNodes);
+		})
+
+		$se1Node.on('dblclick','option',function(){
+			$se2Node.append($(this));
+		})
+		$se2Node.on('dblclick','option',function(){
+			$(this).appendTo($se1Node);
+		})
+	</script>
+</body>
+</html>

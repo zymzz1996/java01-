@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务列表</title>
+    <link rel="stylesheet" href="css/taskStyle.css">
+</head>
+<body>
+<section id="taskList">
+    <ul id="nav">
+    	<li>日常任务</li>
+    	<li>成长任务</li>
+    </ul>
+    <div class="taskContent">
+        <ul id="dayTask">
+            <li>
+                <div>
+                    <h1>交口称赞</h1>
+                    <p>为喜欢的回答送出一个赞</p>
+                    <p>奖励：<span>财富值×10</span><span>经验之石（小）×1</span></p>
+                </div>
+                <div><input type="button" value="前往"></div>
+            </li>
+            <li>
+                <div>
+                    <h1>每日答题</h1>
+                    <p>前往回答一个问题</p>
+                    <p>奖励：<span>铜宝箱×1</span><span>财富值×10</span><span>经验之石（小）×1</span></p>
+                </div>
+                <div><input type="button" value="前往"></div>
+            </li>
+            <li>
+                <div>
+                    <h1>助人为乐</h1>
+                    <p>当日获得1个采纳</p>
+                    <p>奖励：<span>铜宝箱×1</span><span>财富值×10</span></p>
+                </div>
+                <div><input type="button" value="前往"></div>
+            </li>
+        </ul>
+        <ul id="growTask">
+            <li>
+                <div>
+                    <h1>成长之路</h1>
+                    <p>知道等级达到2级</p>
+                    <p>奖励：<span>财富值×20</span><span>铜宝箱×1</span><span>准备入学微章×1</span></p>
+                </div>
+                <div><input type="button" value="前往"></div>
+            </li>
+            <li>
+                <div>
+                    <h1>知识之路</h1>
+                    <p>在知道获得1个采纳</p>
+                    <p>奖励：<span>铜宝箱×1</span><span>财富值×20</span><span>经验之石（小）×1</span></p>
+                </div>
+                <div><input type="button" value="前往"></div>
+            </li>
+            <li>
+                <div>
+                </div>
+                <div><input type="button" id="del" value="解除绑定"></div>
+            </li>
+        </ul>
+    </div>
+</section>
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js" ></script>
+	<script>
+		var $titleNodes = $('#nav li');
+		$titleNodes.click(function(){
+			var index = $(this).index();
+			var background = $(this).css('background-color');
+			$('.taskContent ul').eq(index).show().siblings().hide().parent().css('background-color',background)
+			
+		})
+		
+//		var $liNodes = $("#nav li");
+//		//var $ulNodes = $(".taskContent ul");
+//		
+//		$liNodes.click(function(){
+//			// 获取当前头部的背景色 
+//			var background = $(this).css("background-color");
+//		//	alert(background)
+//			// 获取点击的索引  分布    
+//			var index = $(this).index();
+//		//	$ulNodes.eq(index).show().siblings().hide();
+//		//	$(".taskContent").css('background-color',background)
+//			
+//			//链式编程
+//			//$(".taskContent ul").eq(index).show().siblings().hide().parent().css('background-color',background);
+//			
+//			
+//			$(".taskContent ul").parent().css('background-color',background).end().eq(index).show().siblings().hide();
+//		})
+	</script>
+</body>
+</html>
